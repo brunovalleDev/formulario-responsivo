@@ -1,7 +1,7 @@
 .container {
   border-radius: 0.3rem;
   background-color: #fff;
-  padding: 1rem 0.8rem;
+  padding: 1rem 2rem;
   width: 100%;
   max-width: 700px;
 
@@ -9,17 +9,49 @@
     font-size: 25px;
     font-weight: 700;
     position: relative;
-    padding-left: 1rem;
   }
 
   .title::before {
     content: '';
-    background-color: rgba(110, 123, 251);
     position: absolute;
-    height: 50%;
-    width: 3px;
-    top: 0.5rem;
+    width: 1.75rem;
+    height: 0.2rem;
+    background-image: linear-gradient(135deg, rgba(156, 252, 248, 1) 11.2%, rgba(110, 123, 251, 1) 91.1%);
+    bottom: 0;
     left: 0;
+  }
+
+  form {
+    .detalhes-usuario {
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border: 1px solid black;
+      margin: 20px 0 12px 0;
+
+      .input-box {
+        display: flex;
+        flex-direction: column;
+        width: 47%;
+        margin-bottom: 1rem;
+
+        .label-campo-registro {
+          margin-bottom: 0.25rem;
+          font-weight: 600;
+        }
+
+        input {
+          height: 45px;
+          outline: none;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          padding-left: 0.5rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+
   }
 
 }
