@@ -27,13 +27,12 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      border: 1px solid black;
       margin: 20px 0 12px 0;
 
       .input-box {
         display: flex;
         flex-direction: column;
-        width: 47%;
+        width: calc(50% - 20px);
         margin-bottom: 1rem;
 
         .label-campo-registro {
@@ -48,10 +47,100 @@
           border-radius: 5px;
           padding-left: 0.5rem;
           font-size: 0.9rem;
+          border-bottom-width: 2px;
         }
+
+        input:focus,
+        input:valid {
+          border-color: rgba(110, 123, 251, 1);
+        }
+
+
       }
     }
 
+    .detalhes-genero {
+
+      .titulo-genero {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .categorias {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        margin: 14px 0;
+
+        label {
+          display: flex;
+          align-items: center;
+
+          .marcacao-genero {
+            border: 4px solid transparent;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background-color: #d9d9d9;
+            transition-property: all;
+            transition-delay: 0.5;
+            transition-duration: 0.5s;
+            transition-timing-function: ease;
+          }
+
+        }
+
+      }
+
+      #radio-btn-1:checked~.categorias label .btn-1,
+      #radio-btn-2:checked~.categorias label .btn-2,
+      #radio-btn-3:checked~.categorias label .btn-3 {
+        background: #9b59b6;
+        border-color: #d9d9d9;
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+
+    }
+
+    .botao-registro {
+      margin: 45px auto;
+      height: 45px;
+      width: 50%;
+
+      input {
+        border: none;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: white;
+        background-color: rgba(110, 123, 251);
+        transition-property: all;
+        transition-duration: 0.9s;
+        transition-timing-function: ease;
+      }
+
+      input:hover {
+        background-color: rgba(156, 252, 248, 1);
+        background-color: rgb(73, 12, 171);
+      }
+
+    }
+  }
+
+  @media (max-width: 100px) {
+    .detalhes-genero {
+      display: none;
+    }
   }
 
 }
