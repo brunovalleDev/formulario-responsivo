@@ -23,6 +23,7 @@ body {
   padding: 1rem 2rem;
   width: 100%;
   max-width: 700px;
+  margin: 0 10px;
 }
 .container .title {
   font-size: 25px;
@@ -128,8 +129,21 @@ body {
   background-color: rgb(156, 252, 248);
   background-color: rgb(73, 12, 171);
 }
-@media (max-width: 100px) {
-  .container .detalhes-genero {
-    display: none;
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%;
+  }
+  .container form .detalhes-usuario {
+    max-height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 2rem;
+  }
+  .container form .detalhes-usuario .input-box {
+    margin-bottom: 15px;
+    width: 90%;
+  }
+  .container form .detalhes-genero .categorias {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

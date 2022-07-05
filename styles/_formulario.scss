@@ -4,6 +4,7 @@
   padding: 1rem 2rem;
   width: 100%;
   max-width: 700px;
+  margin: 0 10px;
 
   .title {
     font-size: 25px;
@@ -129,6 +130,7 @@
         transition-timing-function: ease;
       }
 
+
       input:hover {
         background-color: rgba(156, 252, 248, 1);
         background-color: rgb(73, 12, 171);
@@ -137,10 +139,29 @@
     }
   }
 
-  @media (max-width: 100px) {
-    .detalhes-genero {
-      display: none;
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%;
+
+    form {
+      .detalhes-usuario {
+        max-height: 300px;
+        overflow-y: scroll;
+        margin-bottom: 2rem;
+
+        .input-box {
+          margin-bottom: 15px;
+          width: 90%;
+        }
+      }
+
+      .detalhes-genero {
+        .categorias {
+          width: 100%;
+        }
+      }
     }
   }
-
 }
